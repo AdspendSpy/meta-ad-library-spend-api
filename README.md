@@ -1,9 +1,10 @@
-# Competitor Ad Spend API — Python & TypeScript clients
+# Meta Ad Library Spend API — MCP server, Claude Code & Codex plugin, Python & TypeScript clients
 
-**AdSpendSpy is a competitor ad spend API for Meta (Facebook and Instagram) ads.** It answers,
-programmatically, the question every media buyer asks manually: *how much is this competitor
-spending on ads, on which creatives, with which hooks?* This repository holds the official
-read-only clients — Python and TypeScript, zero dependencies in both.
+**AdSpendSpy is a Meta Ad Library spend API: the ads from the Meta Ad Library, plus the estimated
+spend behind each Facebook and Instagram ad.** It answers, programmatically, the question every
+media buyer asks manually: *how much is this competitor spending on ads, on which creatives, with
+which hooks?* This repository holds the official read-only clients (Python and TypeScript, zero
+dependencies in both), the Claude Code & Codex plugin and the MCP server definition.
 
 | | |
 |---|---|

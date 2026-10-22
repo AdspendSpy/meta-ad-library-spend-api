@@ -1,4 +1,4 @@
-"""AdSpendSpy - competitor ad spend API client for Python.
+"""AdSpendSpy - Meta Ad Library spend API client for Python.
 
 Query the Meta (Facebook/Instagram) ads of the brands you track: estimated spend, creatives,
 call-to-actions, hooks and headlines.

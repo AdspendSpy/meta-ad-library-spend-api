@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "adspendspy"
 version = "0.2.0"
-description = "Competitor ad spend API client - query Meta (Facebook/Instagram) ad spend, creatives and hooks from AdSpendSpy"
+description = "Meta Ad Library spend API client - query estimated Facebook/Instagram ad spend, creatives and hooks from AdSpendSpy"
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }

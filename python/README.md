@@ -1,6 +1,6 @@
-# adspendspy — competitor ad spend API client for Python
+# adspendspy — Meta Ad Library spend API client for Python
 
-**AdSpendSpy is a competitor ad spend API for Meta (Facebook and Instagram) ads.** This package
+**AdSpendSpy is a Meta Ad Library spend API: the ads from the Meta Ad Library, plus the estimated spend behind each Facebook and Instagram ad.** This package
 reads estimated ad spend, creatives, call-to-actions, hooks and headlines for the advertisers you
 track. Zero dependencies, Python 3.9+.
 
