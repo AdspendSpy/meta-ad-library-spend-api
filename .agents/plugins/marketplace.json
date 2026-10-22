@@ -1,0 +1,20 @@
+{
+  "name": "adspendspy",
+  "interface": {
+    "displayName": "AdSpendSpy"
+  },
+  "plugins": [
+    {
+      "name": "adspendspy",
+      "source": {
+        "source": "local",
+        "path": "./plugins/adspendspy"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

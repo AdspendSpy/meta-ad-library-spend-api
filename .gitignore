@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+# The claude.ai skill ZIP is published from the root dist/.
+!/dist/
+/dist/*
+!/dist/rebuild-landing-page.zip
+.venv/
+venv/
+
+# Node
+node_modules/
+typescript/dist/
+
+# Secrets and local output
+.env
+*.csv
+
+# OS
+.DS_Store
+
+# Zapier integration is still being built; keep it out of the public repo until it is complete.
+/integrations/

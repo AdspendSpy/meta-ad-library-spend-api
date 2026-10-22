@@ -1,0 +1,47 @@
+{
+  "name": "adspendspy",
+  "version": "0.2.0",
+  "description": "Competitor ad spend API client - query Meta (Facebook/Instagram) ad spend, creatives and hooks from AdSpendSpy",
+  "license": "MIT",
+  "author": "AdSpendSpy <hello@adspendspy.com>",
+  "homepage": "https://www.adspendspy.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adspendspy/meta-ad-library-spend-api.git",
+    "directory": "typescript"
+  },
+  "keywords": [
+    "competitor-ad-spend",
+    "meta-ads",
+    "facebook-ads",
+    "ad-library",
+    "ad-intelligence",
+    "api-client",
+    "marketing"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.11.0"
+  },
+  "dependencies": {}
+}

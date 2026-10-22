@@ -1,0 +1,34 @@
+{
+  "version": "1.0.0",
+  "name": "adspendspy",
+  "description": "Research Meta ads and estimated ad spend with AdSpendSpy, and rebuild top-spending landing pages for your own offer.",
+  "author": {
+    "name": "AdSpendSpy",
+    "url": "https://www.adspendspy.com"
+  },
+  "homepage": "https://www.adspendspy.com/api-docs#skill",
+  "repository": "https://github.com/adspendspy/meta-ad-library-spend-api",
+  "license": "MIT",
+  "keywords": ["meta ads", "facebook ads", "ad library", "ad spend", "landing page", "mcp"],
+  "skills": "./skills/",
+  "mcpServers": "./.codex-mcp.json",
+  "interface": {
+    "displayName": "AdSpendSpy",
+    "shortDescription": "Meta ad spend research and landing-page rebuilds",
+    "longDescription": "AdSpendSpy connects Codex to your tracked Meta advertisers: their ads, estimated spend and the landing pages that receive the most ad spend. The rebuild-landing-page skill turns a top-spending landing page into a structural blueprint and rebuilds it for your own offer with original copy. Without an API key, the public demo covers Alex Hormozi.",
+    "developerName": "AdSpendSpy",
+    "category": "Productivity",
+    "capabilities": ["Read"],
+    "websiteURL": "https://www.adspendspy.com",
+    "privacyPolicyURL": "https://www.adspendspy.com/privacy",
+    "termsOfServiceURL": "https://www.adspendspy.com/terms",
+    "defaultPrompt": [
+      "Rebuild the top landing page of Alex Hormozi for my coaching offer",
+      "Which landing page of this advertiser gets the most ad spend?",
+      "Tear down the best landing page of my competitor"
+    ],
+    "brandColor": "#1877F2",
+    "composerIcon": "./assets/logo.png",
+    "logo": "./assets/logo.png"
+  }
+}

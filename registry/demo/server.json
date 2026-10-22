@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.adspendspy/adspendspy-demo",
+  "title": "AdSpendSpy MCP Demo",
+  "description": "Keyless demo: one public advertiser's ads, top landing pages and estimated ad spend.",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.adspendspy.com/brands/ads/alex-hormozi",
+  "icons": [
+    {
+      "src": "https://www.adspendspy.com/assets/brand/signal-lens-icon-512.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.adspendspy.com/mcp-demo"
+    }
+  ]
+}

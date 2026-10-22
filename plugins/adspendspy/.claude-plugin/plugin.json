@@ -1,0 +1,14 @@
+{
+  "name": "adspendspy",
+  "version": "1.0.0",
+  "description": "Research Meta ads and estimated ad spend with AdSpendSpy, and rebuild top-spending landing pages for your own offer.",
+  "author": {
+    "name": "AdSpendSpy",
+    "url": "https://www.adspendspy.com"
+  },
+  "homepage": "https://www.adspendspy.com/api-docs#skill",
+  "repository": "https://github.com/adspendspy/meta-ad-library-spend-api",
+  "license": "MIT",
+  "keywords": ["meta ads", "facebook ads", "ad library", "ad spend", "landing page", "mcp"],
+  "mcpServers": "./.mcp.json"
+}

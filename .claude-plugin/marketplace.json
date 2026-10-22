@@ -1,0 +1,20 @@
+{
+  "name": "adspendspy",
+  "owner": {
+    "name": "AdSpendSpy",
+    "url": "https://www.adspendspy.com"
+  },
+  "metadata": {
+    "description": "AdSpendSpy for Claude Code: research Meta ads and estimated ad spend over MCP, and rebuild top-spending landing pages for your own offer.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "adspendspy",
+      "source": "./plugins/adspendspy",
+      "description": "AdSpendSpy MCP server (tracked advertisers, ads, estimated spend, top landing pages), two landing-page prompts and the rebuild-landing-page skill.",
+      "category": "marketing",
+      "tags": ["meta ads", "facebook ads", "ad library", "ad spend", "landing page", "mcp"]
+    }
+  ]
+}
