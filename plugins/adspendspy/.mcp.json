@@ -2,10 +2,7 @@
   "mcpServers": {
     "adspendspy": {
       "type": "http",
-      "url": "https://www.adspendspy.com/mcp",
-      "headers": {
-        "X-API-Key": "${ADSPENDSPY_API_KEY}"
-      }
+      "url": "https://www.adspendspy.com/mcp"
     },
     "adspendspy-demo": {
       "type": "http",

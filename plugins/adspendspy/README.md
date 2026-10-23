@@ -7,7 +7,7 @@ and rebuild the landing pages that get the most ad spend for your own offer.
 
 | Part | What it does |
 |---|---|
-| **MCP server `adspendspy`** | Your account: `https://www.adspendspy.com/mcp`, authenticated with your API key in the `X-API-Key` header |
+| **MCP server `adspendspy`** | Your account: `https://www.adspendspy.com/mcp`. Claude Code signs in with your AdSpendSpy login (OAuth); Codex uses your API key in the `X-API-Key` header |
 | **MCP server `adspendspy-demo`** | Public demo without a key: `https://www.adspendspy.com/mcp-demo`, covers Alex Hormozi only (page_id `116482854782233`) |
 | **MCP prompts** | `rebuild_landing_page` and `landing_page_teardown`. Fetching a prompt never consumes API quota |
 | **Skill `rebuild-landing-page`** | Picks a top-spending landing page, maps its structure and layout, and rebuilds it for your own offer with original copy. Teardown-only mode analyses without building |
@@ -52,18 +52,23 @@ codex plugin add adspendspy@adspendspy
 **claude.ai** (skill only): upload `dist/rebuild-landing-page.zip` under Settings → Capabilities →
 Skills. Build the ZIP with `node scripts/package-skill.mjs`.
 
-## API key
+## Sign in
 
-Create a key under **Account Settings → API Keys** at
+**Claude Code:** after installing, run `/mcp`, choose `adspendspy` and select Authenticate. Your
+browser opens AdSpendSpy; sign in and allow access. No API key is needed, and you can revoke
+access any time under Settings → Connected apps.
+
+**Codex:** create a key under **Account Settings → API Keys** at
 [adspendspy.com/settings.php](https://www.adspendspy.com/settings.php) and export it before you
-start Claude Code or Codex:
+start Codex:
 
 ```bash
 export ADSPENDSPY_API_KEY=asp_live_...
 ```
 
-The plugin sends it only as `X-API-Key`. Without a key only `adspendspy-demo` works; the
-`adspendspy` server then shows as failed or answers `401` — that is expected, not a broken install.
+Codex sends it only as `X-API-Key`. Before you sign in (Claude Code) or without a key (Codex) only
+`adspendspy-demo` works; the `adspendspy` server then asks for authentication or answers `401` —
+that is expected, not a broken install.
 
 ## Example prompts
 

@@ -11,7 +11,9 @@ manifest:
 | `plugins/adspendspy/.codex-plugin/plugin.json` + `.codex-mcp.json` | Codex plugin + MCP servers |
 | `plugins/adspendspy/skills/rebuild-landing-page/` | Skill, shared by both |
 
-## 1. API key
+## 1. API key (Codex only)
+
+Claude Code needs no key: it signs in with OAuth (section 2). Codex reads a personal key:
 
 ```bash
 export ADSPENDSPY_API_KEY=asp_live_...
@@ -29,8 +31,9 @@ works; the account server `adspendspy` shows as failed or returns `401`.
 /plugin install adspendspy@adspendspy
 ```
 
-Restart Claude Code after setting `ADSPENDSPY_API_KEY`. The MCP config uses `${ADSPENDSPY_API_KEY}`
-expansion in the `X-API-Key` header. Claude Code lists the MCP prompts as slash commands
+Then run `/mcp`, choose `adspendspy` and select Authenticate: the browser opens the AdSpendSpy
+consent page (OAuth with PKCE, scopes `account.read` and `brands.track`). The plugin stores no
+credential and reads none from the environment. Claude Code lists the MCP prompts as slash commands
 (`/mcp__adspendspy__rebuild_landing_page`, `/mcp__adspendspy__landing_page_teardown`).
 
 ## 3. Codex
