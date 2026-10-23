@@ -1,0 +1,166 @@
+[
+    {
+        "name": "id",
+        "type": "text",
+        "label": "Event ID"
+    },
+    {
+        "name": "event",
+        "type": "text",
+        "label": "Event"
+    },
+    {
+        "name": "occurred_at",
+        "type": "date",
+        "label": "Occurred at"
+    },
+    {
+        "name": "currency",
+        "type": "text",
+        "label": "Currency"
+    },
+    {
+        "name": "spend_is_estimate",
+        "type": "boolean",
+        "label": "Spend is an estimate"
+    },
+    {
+        "name": "brand",
+        "type": "collection",
+        "label": "Brand",
+        "spec": [
+            {
+                "name": "page_id",
+                "type": "text",
+                "label": "Page ID"
+            },
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Name"
+            },
+            {
+                "name": "image_url",
+                "type": "url",
+                "label": "Image URL"
+            },
+            {
+                "name": "url",
+                "type": "url",
+                "label": "AdSpendSpy brand URL"
+            }
+        ]
+    },
+    {
+        "name": "ad",
+        "type": "collection",
+        "label": "Ad",
+        "spec": [
+            {
+                "name": "internal_ad_id",
+                "type": "uinteger",
+                "label": "Internal ad ID"
+            },
+            {
+                "name": "meta_ad_id",
+                "type": "text",
+                "label": "Ad ID"
+            },
+            {
+                "name": "ad_archive_id",
+                "type": "text",
+                "label": "Ad Library archive ID"
+            },
+            {
+                "name": "headline",
+                "type": "text",
+                "label": "Headline"
+            },
+            {
+                "name": "body_text",
+                "type": "text",
+                "label": "Body text"
+            },
+            {
+                "name": "cta_text",
+                "type": "text",
+                "label": "Call to action"
+            },
+            {
+                "name": "landing_url",
+                "type": "url",
+                "label": "Landing page URL"
+            },
+            {
+                "name": "media_type",
+                "type": "text",
+                "label": "Media type"
+            },
+            {
+                "name": "thumbnail_url",
+                "type": "url",
+                "label": "Thumbnail URL"
+            },
+            {
+                "name": "video_url",
+                "type": "url",
+                "label": "Video URL"
+            },
+            {
+                "name": "platforms",
+                "type": "array",
+                "label": "Platforms",
+                "spec": {
+                    "type": "text"
+                }
+            },
+            {
+                "name": "start_date",
+                "type": "date",
+                "label": "Start date"
+            },
+            {
+                "name": "is_active",
+                "type": "boolean",
+                "label": "Active"
+            },
+            {
+                "name": "estimated_spend_eur",
+                "type": "number",
+                "label": "Estimated spend (EUR)"
+            },
+            {
+                "name": "spend_coverage",
+                "type": "text",
+                "label": "Spend coverage"
+            },
+            {
+                "name": "url",
+                "type": "url",
+                "label": "AdSpendSpy ad URL"
+            }
+        ]
+    },
+    {
+        "name": "alert",
+        "type": "collection",
+        "label": "Alert",
+        "spec": [
+            {
+                "name": "alert_id",
+                "type": "uinteger",
+                "label": "Alert ID"
+            },
+            {
+                "name": "threshold_eur",
+                "type": "number",
+                "label": "Threshold (EUR)"
+            },
+            {
+                "name": "spend_at_alert_eur",
+                "type": "number",
+                "label": "Spend at alert (EUR)"
+            }
+        ]
+    }
+]

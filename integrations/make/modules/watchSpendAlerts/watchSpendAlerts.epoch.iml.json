@@ -1,0 +1,15 @@
+{
+    "url": "/alerts/list.php",
+    "method": "GET",
+    "qs": {
+        "limit": 100
+    },
+    "response": {
+        "limit": 300,
+        "iterate": "{{body.items}}",
+        "output": {
+            "label": "{{item.brand.name}} – {{item.ad.headline}} (#{{item.alert.alert_id}})",
+            "id": "{{item.alert.alert_id}}"
+        }
+    }
+}

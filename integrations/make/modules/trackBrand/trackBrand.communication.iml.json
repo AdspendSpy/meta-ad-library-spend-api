@@ -1,0 +1,11 @@
+{
+    "url": "/brands/track.php",
+    "method": "POST",
+    "body": {
+        "page_id": "{{parameters.page_id}}",
+        "brand_name": "{{parameters.brand_name}}"
+    },
+    "response": {
+        "output": "{{body}}"
+    }
+}

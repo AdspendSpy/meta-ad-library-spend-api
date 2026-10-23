@@ -1,0 +1,89 @@
+{
+	"name": "AdSpendSpy: spend alerts to Google Sheets",
+	"nodes": [
+		{
+			"parameters": {
+				"event": "ad.spend_alert",
+				"filter": "none"
+			},
+			"id": "5a7e2c90-3b14-4d8f-8e21-6c9d0b4f2a01",
+			"name": "AdSpendSpy Trigger",
+			"type": "n8n-nodes-adspendspy.adSpendSpyTrigger",
+			"typeVersion": 1,
+			"position": [0, 0],
+			"webhookId": "c41e7a2d-9f60-4b38-a5e1-7d2b3c8f9e01",
+			"credentials": {
+				"adSpendSpyApi": {
+					"id": "",
+					"name": "AdSpendSpy API account"
+				}
+			}
+		},
+		{
+			"parameters": {
+				"operation": "append",
+				"documentId": {
+					"__rl": true,
+					"value": "",
+					"mode": "list"
+				},
+				"sheetName": {
+					"__rl": true,
+					"value": "",
+					"mode": "list"
+				},
+				"columns": {
+					"mappingMode": "defineBelow",
+					"value": {
+						"Event ID": "={{ $json.id }}",
+						"Alert time": "={{ $json.occurred_at }}",
+						"Brand": "={{ $json.brand.name }}",
+						"Page ID": "={{ $json.brand.page_id }}",
+						"Headline": "={{ $json.ad.headline }}",
+						"Landing page": "={{ $json.ad.landing_url }}",
+						"Threshold (EUR)": "={{ $json.alert.threshold_eur }}",
+						"Estimated spend at alert (EUR)": "={{ $json.alert.spend_at_alert_eur }}",
+						"Estimated spend now (EUR)": "={{ $json.ad.estimated_spend_eur }}",
+						"Ad link": "={{ $json.ad.url }}"
+					},
+					"matchingColumns": [],
+					"schema": []
+				},
+				"options": {}
+			},
+			"id": "5a7e2c90-3b14-4d8f-8e21-6c9d0b4f2a02",
+			"name": "Append row",
+			"type": "n8n-nodes-base.googleSheets",
+			"typeVersion": 4.5,
+			"position": [260, 0],
+			"credentials": {
+				"googleSheetsOAuth2Api": {
+					"id": "",
+					"name": "Google Sheets account"
+				}
+			}
+		}
+	],
+	"connections": {
+		"AdSpendSpy Trigger": {
+			"main": [
+				[
+					{
+						"node": "Append row",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		}
+	},
+	"active": false,
+	"settings": {
+		"executionOrder": "v1"
+	},
+	"pinData": {},
+	"meta": {
+		"templateCredsSetupCompleted": false
+	},
+	"tags": []
+}

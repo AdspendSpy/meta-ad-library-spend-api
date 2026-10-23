@@ -22,5 +22,7 @@ typescript/dist/
 # OS
 .DS_Store
 
-# Zapier integration is still being built; keep it out of the public repo until it is complete.
-/integrations/
+# Integration build output and local platform state (Zapier, Make, n8n).
+/integrations/*/dist/
+/integrations/zapier/.zapierapprc
+/integrations/zapier/build/

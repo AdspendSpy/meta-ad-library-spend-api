@@ -1,0 +1,15 @@
+[
+    {
+        "name": "page_id",
+        "type": "text",
+        "label": "Facebook page ID",
+        "help": "Numeric ID of the Facebook page, for example from its Ad Library URL (view_all_page_id).",
+        "required": true
+    },
+    {
+        "name": "brand_name",
+        "type": "text",
+        "label": "Brand name",
+        "required": true
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "name": "apiKey",
+        "type": "password",
+        "label": "API key",
+        "help": "Create an API key in AdSpendSpy under Account → API. It starts with asp_live_.",
+        "required": true,
+        "editable": true
+    }
+]

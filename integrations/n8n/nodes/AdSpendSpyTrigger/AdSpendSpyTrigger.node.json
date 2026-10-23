@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-adspendspy.adSpendSpyTrigger",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Marketing & Content"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://github.com/adspendspy/meta-ad-library-spend-api/tree/main/integrations/n8n#credentials"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://www.adspendspy.com/api-docs#automations"
+			}
+		]
+	}
+}

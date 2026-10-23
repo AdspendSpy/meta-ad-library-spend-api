@@ -1,0 +1,68 @@
+{
+	"name": "AdSpendSpy: new competitor ad to Slack",
+	"nodes": [
+		{
+			"parameters": {
+				"event": "ad.new",
+				"filter": "none"
+			},
+			"id": "3d0f6b1e-6a43-4c55-9a1c-1f2b7c1d0a01",
+			"name": "AdSpendSpy Trigger",
+			"type": "n8n-nodes-adspendspy.adSpendSpyTrigger",
+			"typeVersion": 1,
+			"position": [0, 0],
+			"webhookId": "8f2c4b9e-1d3a-4e7b-9c5d-2a6f0e8b1c01",
+			"credentials": {
+				"adSpendSpyApi": {
+					"id": "",
+					"name": "AdSpendSpy API account"
+				}
+			}
+		},
+		{
+			"parameters": {
+				"select": "channel",
+				"channelId": {
+					"__rl": true,
+					"value": "#competitor-ads",
+					"mode": "name"
+				},
+				"text": "=New ad from *{{ $json.brand.name }}*\n{{ $json.ad.headline || '' }}\n{{ $json.ad.body_text ? $json.ad.body_text.slice(0, 300) : '' }}\nStarted: {{ $json.ad.start_date }} · Platforms: {{ ($json.ad.platforms || []).join(', ') }}\nEstimated spend: {{ $json.ad.estimated_spend_eur === null ? 'not yet estimated' : '€' + $json.ad.estimated_spend_eur }}\n<{{ $json.ad.url }}|Open in AdSpendSpy>",
+				"otherOptions": {}
+			},
+			"id": "3d0f6b1e-6a43-4c55-9a1c-1f2b7c1d0a02",
+			"name": "Post to Slack",
+			"type": "n8n-nodes-base.slack",
+			"typeVersion": 2.3,
+			"position": [260, 0],
+			"credentials": {
+				"slackApi": {
+					"id": "",
+					"name": "Slack account"
+				}
+			}
+		}
+	],
+	"connections": {
+		"AdSpendSpy Trigger": {
+			"main": [
+				[
+					{
+						"node": "Post to Slack",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		}
+	},
+	"active": false,
+	"settings": {
+		"executionOrder": "v1"
+	},
+	"pinData": {},
+	"meta": {
+		"templateCredsSetupCompleted": false
+	},
+	"tags": []
+}

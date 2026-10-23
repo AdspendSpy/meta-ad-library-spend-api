@@ -1,0 +1,57 @@
+[
+    {
+        "name": "success",
+        "type": "boolean",
+        "label": "Success"
+    },
+    {
+        "name": "message",
+        "type": "text",
+        "label": "Message"
+    },
+    {
+        "name": "brand_id",
+        "type": "uinteger",
+        "label": "Brand ID"
+    },
+    {
+        "name": "page_id",
+        "type": "text",
+        "label": "Page ID"
+    },
+    {
+        "name": "already_tracked",
+        "type": "boolean",
+        "label": "Already tracked"
+    },
+    {
+        "name": "reactivated",
+        "type": "boolean",
+        "label": "Reactivated"
+    },
+    {
+        "name": "tracked_count",
+        "type": "uinteger",
+        "label": "Tracked brands"
+    },
+    {
+        "name": "tracked_limit",
+        "type": "uinteger",
+        "label": "Tracked brand limit"
+    },
+    {
+        "name": "remaining_slots",
+        "type": "uinteger",
+        "label": "Remaining slots"
+    },
+    {
+        "name": "ingestion_state",
+        "type": "text",
+        "label": "Import state"
+    },
+    {
+        "name": "ads_count",
+        "type": "uinteger",
+        "label": "Ads stored"
+    }
+]

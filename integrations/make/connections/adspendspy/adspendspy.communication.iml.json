@@ -1,0 +1,20 @@
+{
+    "url": "https://www.adspendspy.com/api/v1/brands/list.php",
+    "method": "GET",
+    "headers": {
+        "Authorization": "Bearer {{parameters.apiKey}}"
+    },
+    "response": {
+        "error": {
+            "402": {
+                "message": "AdSpendSpy automations need a paid plan."
+            },
+            "message": "[{{statusCode}}] {{body.message}}"
+        }
+    },
+    "log": {
+        "sanitize": [
+            "request.headers.authorization"
+        ]
+    }
+}

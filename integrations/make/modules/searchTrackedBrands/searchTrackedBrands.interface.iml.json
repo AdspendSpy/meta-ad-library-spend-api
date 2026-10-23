@@ -1,0 +1,37 @@
+[
+    {
+        "name": "id",
+        "type": "uinteger",
+        "label": "Brand ID"
+    },
+    {
+        "name": "page_id",
+        "type": "text",
+        "label": "Page ID"
+    },
+    {
+        "name": "brand_name",
+        "type": "text",
+        "label": "Brand name"
+    },
+    {
+        "name": "display_name",
+        "type": "text",
+        "label": "Display name"
+    },
+    {
+        "name": "display_image",
+        "type": "url",
+        "label": "Image URL"
+    },
+    {
+        "name": "ad_count",
+        "type": "uinteger",
+        "label": "Ads stored"
+    },
+    {
+        "name": "status",
+        "type": "text",
+        "label": "Status"
+    }
+]

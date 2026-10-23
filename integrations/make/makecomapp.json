@@ -1,0 +1,169 @@
+{
+    "fileVersion": 1,
+    "generalCodeFiles": {
+        "base": "general/base.iml.json",
+        "common": "general/common.json",
+        "readme": "general/readme.md",
+        "groups": "general/groups.json"
+    },
+    "app": {
+        "name": "adspendspy",
+        "label": "AdSpendSpy",
+        "description": "Route new ads and spend alerts of the brands you track in AdSpendSpy to Slack, Google Sheets and other tools, and track new brands from your scenarios.",
+        "version": 1,
+        "theme": "#1877F2",
+        "language": "en",
+        "countries": [],
+        "audience": "global",
+        "icon": "assets/icon-512.png"
+    },
+    "components": {
+        "connection": {
+            "adspendspy": {
+                "label": "AdSpendSpy API key",
+                "connectionType": "basic",
+                "codeFiles": {
+                    "communication": "connections/adspendspy/adspendspy.communication.iml.json",
+                    "params": "connections/adspendspy/adspendspy.params.iml.json"
+                }
+            }
+        },
+        "webhook": {
+            "newAd": {
+                "label": "New ad",
+                "webhookType": "web-dedicated",
+                "connection": "adspendspy",
+                "codeFiles": {
+                    "communication": "webhooks/newAd/newAd.communication.iml.json",
+                    "params": "webhooks/newAd/newAd.params.iml.json",
+                    "attach": "webhooks/newAd/newAd.attach.iml.json",
+                    "detach": "webhooks/newAd/newAd.detach.iml.json"
+                }
+            },
+            "newSpendAlert": {
+                "label": "New spend alert",
+                "webhookType": "web-dedicated",
+                "connection": "adspendspy",
+                "codeFiles": {
+                    "communication": "webhooks/newSpendAlert/newSpendAlert.communication.iml.json",
+                    "params": "webhooks/newSpendAlert/newSpendAlert.params.iml.json",
+                    "attach": "webhooks/newSpendAlert/newSpendAlert.attach.iml.json",
+                    "detach": "webhooks/newSpendAlert/newSpendAlert.detach.iml.json"
+                }
+            }
+        },
+        "module": {
+            "watchNewAdsInstant": {
+                "label": "Watch New Ads (instant)",
+                "description": "Triggers at once when a brand you track starts a new ad.",
+                "moduleType": "instant_trigger",
+                "webhook": "newAd",
+                "connection": "adspendspy",
+                "codeFiles": {
+                    "staticParams": "modules/watchNewAdsInstant/watchNewAdsInstant.static-params.iml.json",
+                    "interface": "modules/watchNewAdsInstant/watchNewAdsInstant.interface.iml.json",
+                    "samples": "modules/watchNewAdsInstant/watchNewAdsInstant.samples.iml.json"
+                }
+            },
+            "watchSpendAlertsInstant": {
+                "label": "Watch Spend Alerts (instant)",
+                "description": "Triggers at once when an ad of a brand you track passes your spend alert threshold.",
+                "moduleType": "instant_trigger",
+                "webhook": "newSpendAlert",
+                "connection": "adspendspy",
+                "codeFiles": {
+                    "staticParams": "modules/watchSpendAlertsInstant/watchSpendAlertsInstant.static-params.iml.json",
+                    "interface": "modules/watchSpendAlertsInstant/watchSpendAlertsInstant.interface.iml.json",
+                    "samples": "modules/watchSpendAlertsInstant/watchSpendAlertsInstant.samples.iml.json"
+                }
+            },
+            "watchNewAds": {
+                "label": "Watch New Ads",
+                "description": "Checks for new ads of the brands you track at the scheduled interval.",
+                "moduleType": "trigger",
+                "connection": "adspendspy",
+                "codeFiles": {
+                    "communication": "modules/watchNewAds/watchNewAds.communication.iml.json",
+                    "staticParams": "modules/watchNewAds/watchNewAds.static-params.iml.json",
+                    "epoch": "modules/watchNewAds/watchNewAds.epoch.iml.json",
+                    "interface": "modules/watchNewAds/watchNewAds.interface.iml.json",
+                    "samples": "modules/watchNewAds/watchNewAds.samples.iml.json"
+                }
+            },
+            "watchSpendAlerts": {
+                "label": "Watch Spend Alerts",
+                "description": "Checks for new spend alerts of the brands you track at the scheduled interval.",
+                "moduleType": "trigger",
+                "connection": "adspendspy",
+                "codeFiles": {
+                    "communication": "modules/watchSpendAlerts/watchSpendAlerts.communication.iml.json",
+                    "staticParams": "modules/watchSpendAlerts/watchSpendAlerts.static-params.iml.json",
+                    "epoch": "modules/watchSpendAlerts/watchSpendAlerts.epoch.iml.json",
+                    "interface": "modules/watchSpendAlerts/watchSpendAlerts.interface.iml.json",
+                    "samples": "modules/watchSpendAlerts/watchSpendAlerts.samples.iml.json"
+                }
+            },
+            "trackBrand": {
+                "label": "Track a Brand",
+                "description": "Adds a Facebook page to the brands you track in AdSpendSpy.",
+                "moduleType": "action",
+                "actionCrud": "create",
+                "connection": "adspendspy",
+                "codeFiles": {
+                    "communication": "modules/trackBrand/trackBrand.communication.iml.json",
+                    "staticParams": "modules/trackBrand/trackBrand.static-params.iml.json",
+                    "mappableParams": "modules/trackBrand/trackBrand.mappable-params.iml.json",
+                    "interface": "modules/trackBrand/trackBrand.interface.iml.json",
+                    "samples": "modules/trackBrand/trackBrand.samples.iml.json"
+                }
+            },
+            "searchTrackedBrands": {
+                "label": "Search Tracked Brands",
+                "description": "Finds brands you track by name, page ID or Facebook page URL.",
+                "moduleType": "search",
+                "connection": "adspendspy",
+                "codeFiles": {
+                    "communication": "modules/searchTrackedBrands/searchTrackedBrands.communication.iml.json",
+                    "staticParams": "modules/searchTrackedBrands/searchTrackedBrands.static-params.iml.json",
+                    "mappableParams": "modules/searchTrackedBrands/searchTrackedBrands.mappable-params.iml.json",
+                    "interface": "modules/searchTrackedBrands/searchTrackedBrands.interface.iml.json",
+                    "samples": "modules/searchTrackedBrands/searchTrackedBrands.samples.iml.json"
+                }
+            },
+            "makeApiCall": {
+                "label": "Make an API Call",
+                "description": "Performs an authorized call to any AdSpendSpy API endpoint.",
+                "moduleType": "universal",
+                "universalType": "rest",
+                "connection": "adspendspy",
+                "codeFiles": {
+                    "communication": "modules/makeApiCall/makeApiCall.communication.iml.json",
+                    "staticParams": "modules/makeApiCall/makeApiCall.static-params.iml.json",
+                    "mappableParams": "modules/makeApiCall/makeApiCall.mappable-params.iml.json",
+                    "interface": "modules/makeApiCall/makeApiCall.interface.iml.json",
+                    "samples": "modules/makeApiCall/makeApiCall.samples.iml.json"
+                }
+            }
+        },
+        "rpc": {
+            "listTrackedBrands": {
+                "label": "List tracked brands",
+                "connection": "adspendspy",
+                "codeFiles": {
+                    "communication": "rpcs/listTrackedBrands/listTrackedBrands.communication.iml.json",
+                    "params": "rpcs/listTrackedBrands/listTrackedBrands.params.iml.json"
+                }
+            },
+            "listProjects": {
+                "label": "List projects",
+                "connection": "adspendspy",
+                "codeFiles": {
+                    "communication": "rpcs/listProjects/listProjects.communication.iml.json",
+                    "params": "rpcs/listProjects/listProjects.params.iml.json"
+                }
+            }
+        },
+        "function": {}
+    },
+    "origins": []
+}

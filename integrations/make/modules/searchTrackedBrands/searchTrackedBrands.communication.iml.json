@@ -1,0 +1,12 @@
+{
+    "url": "/brands/search-tracked.php",
+    "method": "GET",
+    "qs": {
+        "q": "{{parameters.q}}"
+    },
+    "response": {
+        "limit": "{{parameters.limit}}",
+        "iterate": "{{body.results}}",
+        "output": "{{item}}"
+    }
+}

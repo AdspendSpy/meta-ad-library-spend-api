@@ -1,0 +1,18 @@
+[
+    {
+        "name": "page_id",
+        "type": "select",
+        "label": "Tracked brand",
+        "help": "Only events of this tracked brand. Leave empty for all tracked brands. Use either a brand or a project, not both.",
+        "options": "rpc://listTrackedBrands",
+        "required": false
+    },
+    {
+        "name": "project",
+        "type": "select",
+        "label": "Project",
+        "help": "Only events of brands in this project. Leave empty for all projects. Use either a brand or a project, not both.",
+        "options": "rpc://listProjects",
+        "required": false
+    }
+]

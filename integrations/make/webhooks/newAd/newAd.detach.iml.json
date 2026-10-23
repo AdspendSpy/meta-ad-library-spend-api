@@ -1,0 +1,7 @@
+{
+    "url": "/webhooks/unsubscribe.php",
+    "method": "POST",
+    "body": {
+        "id": "{{webhook.id}}"
+    }
+}

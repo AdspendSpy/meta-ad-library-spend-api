@@ -1,0 +1,26 @@
+{
+    "url": "/ads/new.php",
+    "method": "GET",
+    "qs": {
+        "limit": 100,
+        "page_id": "{{parameters.page_id}}",
+        "project": "{{parameters.project}}"
+    },
+    "response": {
+        "limit": "{{parameters.limit}}",
+        "iterate": "{{body.items}}",
+        "output": "{{item}}",
+        "trigger": {
+            "id": "{{item.ad.internal_ad_id}}",
+            "date": "{{item.occurred_at}}",
+            "type": "id",
+            "order": "desc"
+        }
+    },
+    "pagination": {
+        "qs": {
+            "cursor": "{{body.pagination.next_cursor}}"
+        },
+        "condition": "{{body.pagination.has_more}}"
+    }
+}

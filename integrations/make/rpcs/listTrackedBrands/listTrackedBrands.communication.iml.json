@@ -1,0 +1,11 @@
+{
+    "url": "/brands/list.php",
+    "method": "GET",
+    "response": {
+        "iterate": "{{body.data}}",
+        "output": {
+            "label": "{{item.brand_name}}",
+            "value": "{{item.page_id}}"
+        }
+    }
+}

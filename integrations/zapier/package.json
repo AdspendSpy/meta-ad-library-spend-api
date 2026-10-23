@@ -1,0 +1,23 @@
+{
+  "name": "adspendspy-zapier",
+  "version": "1.0.0",
+  "description": "AdSpendSpy integration for Zapier: new ads and spend alerts from tracked brands, track brands, find tracked brands.",
+  "private": true,
+  "author": "AdSpendSpy",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "validate": "zapier-platform validate"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "zapier-platform-core": "19.2.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nock": "^14.0.0",
+    "zapier-platform-cli": "19.2.1"
+  }
+}

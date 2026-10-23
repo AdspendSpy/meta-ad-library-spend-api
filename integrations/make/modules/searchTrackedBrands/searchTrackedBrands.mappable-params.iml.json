@@ -1,0 +1,16 @@
+[
+    {
+        "name": "q",
+        "type": "text",
+        "label": "Search",
+        "help": "Brand name, Facebook page ID or Facebook page URL.",
+        "required": true
+    },
+    {
+        "name": "limit",
+        "type": "uinteger",
+        "label": "Maximum number of results",
+        "default": 10,
+        "required": true
+    }
+]

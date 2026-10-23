@@ -1,0 +1,35 @@
+{
+    "id": "ad.new:48211",
+    "event": "ad.new",
+    "occurred_at": "2026-10-22T07:41:12+00:00",
+    "currency": "EUR",
+    "spend_is_estimate": true,
+    "brand": {
+        "page_id": "100000000000001",
+        "name": "Example Brand",
+        "image_url": "https://pub-example.r2.dev/brands/100000000000001.jpg",
+        "url": "https://www.adspendspy.com/brand/100000000000001?utm_source=adspendspy_api&utm_medium=integration"
+    },
+    "ad": {
+        "internal_ad_id": 48211,
+        "meta_ad_id": "1234567890123456",
+        "ad_archive_id": "1234567890123456",
+        "headline": "Free scaling workshop",
+        "body_text": "Join the free workshop and learn how we scale offers.",
+        "cta_text": "Learn more",
+        "landing_url": "https://example.com/workshop",
+        "media_type": "video",
+        "thumbnail_url": "https://pub-example.r2.dev/ads/48211.jpg",
+        "video_url": null,
+        "platforms": [
+            "facebook",
+            "instagram"
+        ],
+        "start_date": "2026-10-20",
+        "is_active": true,
+        "estimated_spend_eur": 1840.5,
+        "spend_coverage": "eu_uk",
+        "url": "https://www.adspendspy.com/ad/48211?utm_source=adspendspy_api&utm_medium=integration"
+    },
+    "alert": null
+}

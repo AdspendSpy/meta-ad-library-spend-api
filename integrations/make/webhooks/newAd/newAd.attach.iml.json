@@ -1,0 +1,16 @@
+{
+    "url": "/webhooks/subscribe.php",
+    "method": "POST",
+    "body": {
+        "event": "ad.new",
+        "target_url": "{{webhook.url}}",
+        "platform": "make",
+        "page_id": "{{parameters.page_id}}",
+        "project": "{{parameters.project}}"
+    },
+    "response": {
+        "data": {
+            "id": "{{body.webhook.id}}"
+        }
+    }
+}

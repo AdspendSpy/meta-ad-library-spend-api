@@ -1,0 +1,13 @@
+{
+    "success": true,
+    "message": "Brand tracked successfully",
+    "brand_id": 1201,
+    "page_id": "100000000000001",
+    "already_tracked": false,
+    "reactivated": false,
+    "tracked_count": 4,
+    "tracked_limit": 10,
+    "remaining_slots": 6,
+    "ingestion_state": "queued",
+    "ads_count": 0
+}

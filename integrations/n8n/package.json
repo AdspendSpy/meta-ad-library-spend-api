@@ -1,0 +1,54 @@
+{
+	"name": "n8n-nodes-adspendspy",
+	"version": "0.1.0",
+	"description": "n8n nodes for the AdSpendSpy API: trigger workflows on new ads and spend alerts of the brands you track, and track or search brands.",
+	"license": "MIT",
+	"homepage": "https://www.adspendspy.com/api-docs#automations",
+	"keywords": [
+		"n8n-community-node-package",
+		"adspendspy",
+		"ad spend",
+		"competitor ads"
+	],
+	"author": {
+		"name": "AdSpendSpy",
+		"email": "hello@adspendspy.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adspendspy/meta-ad-library-spend-api.git",
+		"directory": "integrations/n8n"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"test": "node --test test/signature.test.js",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/AdSpendSpyApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/AdSpendSpy/AdSpendSpy.node.js",
+			"dist/nodes/AdSpendSpyTrigger/AdSpendSpyTrigger.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "0.53.4",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}

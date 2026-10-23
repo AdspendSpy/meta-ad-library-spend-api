@@ -1,0 +1,11 @@
+{
+    "url": "/projects/get.php",
+    "method": "GET",
+    "response": {
+        "iterate": "{{body.projects}}",
+        "output": {
+            "label": "{{item.project_name}}",
+            "value": "{{item.public_id}}"
+        }
+    }
+}
