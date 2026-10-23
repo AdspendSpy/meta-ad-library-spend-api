@@ -1,9 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.adspendspy/adspendspy",
-  "title": "AdSpendSpy MCP",
-  "description": "Meta Ad Library research with ad spend estimates: Facebook and Instagram ads, top landing pages.",
-  "version": "1.0.1",
+  "title": "Meta Ad Library Spend MCP by AdSpendSpy",
+  "description": "Facebook and Meta Ad Library ads with estimated ad spend per ad, top landing pages and alerts.",
+  "version": "1.0.2",
   "websiteUrl": "https://www.adspendspy.com/api-docs",
   "icons": [
     {
