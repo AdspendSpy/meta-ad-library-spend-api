@@ -9,7 +9,7 @@
     "app": {
         "name": "adspendspy",
         "label": "AdSpendSpy",
-        "description": "Route new ads and spend alerts of the brands you track in AdSpendSpy to Slack, Google Sheets and other tools, and track new brands from your scenarios.",
+        "description": "Meta Ad Library alerts: send new competitor ads and estimated ad spend from AdSpendSpy to Slack, Google Sheets and more. Track brands automatically.",
         "version": 1,
         "theme": "#1877F2",
         "language": "en",

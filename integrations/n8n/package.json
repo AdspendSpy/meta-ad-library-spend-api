@@ -1,14 +1,17 @@
 {
 	"name": "n8n-nodes-adspendspy",
 	"version": "0.1.0",
-	"description": "n8n nodes for the AdSpendSpy API: trigger workflows on new ads and spend alerts of the brands you track, and track or search brands.",
+	"description": "Meta Ad Library alerts: send new competitor ads and estimated ad spend from AdSpendSpy to Slack, Google Sheets and more. Track brands automatically.",
 	"license": "MIT",
 	"homepage": "https://www.adspendspy.com/api-docs#automations",
 	"keywords": [
 		"n8n-community-node-package",
 		"adspendspy",
 		"ad spend",
-		"competitor ads"
+		"competitor ads",
+		"meta ad library",
+		"facebook ads",
+		"ad library"
 	],
 	"author": {
 		"name": "AdSpendSpy",
