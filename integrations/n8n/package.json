@@ -1,7 +1,7 @@
 {
 	"name": "n8n-nodes-adspendspy",
 	"version": "0.1.0",
-	"description": "Meta Ad Library alerts: send new competitor ads and estimated ad spend from AdSpendSpy to Slack, Google Sheets and more. Track brands automatically.",
+	"description": "AdSpendSpy is a Meta Ad Library tool that sends new competitor ads and estimated ad spend alerts to Slack, Google Sheets and more. Track brands too.",
 	"license": "MIT",
 	"homepage": "https://www.adspendspy.com/api-docs#automations",
 	"keywords": [

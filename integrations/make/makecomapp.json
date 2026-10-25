@@ -9,7 +9,7 @@
     "app": {
         "name": "adspendspy",
         "label": "AdSpendSpy",
-        "description": "Meta Ad Library alerts: send new competitor ads and estimated ad spend from AdSpendSpy to Slack, Google Sheets and more. Track brands automatically.",
+        "description": "AdSpendSpy is a Meta Ad Library tool that sends new competitor ads and estimated ad spend alerts to Slack, Google Sheets and more. Track brands too.",
         "version": 1,
         "theme": "#1877F2",
         "language": "en",
