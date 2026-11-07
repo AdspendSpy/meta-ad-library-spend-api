@@ -55,12 +55,22 @@ console.log(`${stats.totalSpend} estimated spend across ${stats.adCount} ads`);
 ## Claude Code & Codex plugin
 
 The AdSpendSpy plugin connects Claude Code and Codex to the AdSpendSpy MCP server (tracked
-advertisers, ads, estimated spend, top landing pages) and ships the `rebuild-landing-page` skill.
+advertisers, ads, estimated spend, top landing pages) and ships two skills: `meta-ad-library-skill` (Meta Ad Library lookups with estimated spend) and
+`rebuild-landing-page`.
 Details, Codex install and the API key setup: [`plugins/adspendspy/README.md`](plugins/adspendspy/README.md).
 
 ```text
 /plugin marketplace add adspendspy/meta-ad-library-spend-api
 /plugin install adspendspy@adspendspy
+```
+
+### Meta Ad Library skill for any agent (skills.sh)
+
+The Meta Ad Library skill also installs on its own into Claude Code, Codex, Cursor and 40+ other
+agents via [skills.sh](https://skills.sh):
+
+```bash
+npx skills add adspendspy/meta-ad-library-spend-api --skill meta-ad-library-skill
 ```
 
 ## MCP Registry

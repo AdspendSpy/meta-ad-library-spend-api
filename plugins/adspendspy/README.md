@@ -10,6 +10,7 @@ and rebuild the landing pages that get the most ad spend for your own offer.
 | **MCP server `adspendspy`** | Your account: `https://www.adspendspy.com/mcp`. Claude Code signs in with your AdSpendSpy login (OAuth); Codex uses your API key in the `X-API-Key` header |
 | **MCP server `adspendspy-demo`** | Public demo without a key: `https://www.adspendspy.com/mcp-demo`, covers Alex Hormozi only (page_id `116482854782233`) |
 | **MCP prompts** | `rebuild_landing_page` and `landing_page_teardown`. Fetching a prompt never consumes API quota |
+| **Skill `meta-ad-library-skill`** | Looks up advertisers, their Facebook and Instagram ads and estimated spend; tells the agent which tool answers which question and how to read the numbers |
 | **Skill `rebuild-landing-page`** | Picks a top-spending landing page, maps its structure and layout, and rebuilds it for your own offer with original copy. Teardown-only mode analyses without building |
 
 ### MCP tools

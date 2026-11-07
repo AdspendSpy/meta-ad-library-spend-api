@@ -9,7 +9,8 @@ manifest:
 | `plugins/adspendspy/.claude-plugin/plugin.json` + `.mcp.json` | Claude Code plugin + MCP servers |
 | `.agents/plugins/marketplace.json` (repo root) | Codex marketplace |
 | `plugins/adspendspy/.codex-plugin/plugin.json` + `.codex-mcp.json` | Codex plugin + MCP servers |
-| `plugins/adspendspy/skills/rebuild-landing-page/` | Skill, shared by both |
+| `plugins/adspendspy/skills/rebuild-landing-page/`, `plugins/adspendspy/skills/meta-ad-library-skill/` | Skills, shared by both |
+| `skills.sh.json` (repo root) | `npx skills add` / skills.sh |
 
 ## 1. API key (Codex only)
 
